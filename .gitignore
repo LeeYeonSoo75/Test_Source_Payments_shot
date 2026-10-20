@@ -1,0 +1,8 @@
+# Claude Code 로컬 설정
+.claude/
+
+# OS / 에디터
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/

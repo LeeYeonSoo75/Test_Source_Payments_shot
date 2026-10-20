@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>바지 | OTSTORE</title>
+  <meta name="description" content="데님, 슬랙스, 조거, 쇼츠까지 핏 좋은 바지를 만나보세요.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/products.js" defer></script>
+  <script src="js/art.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/list.js" defer></script>
+</head>
+<body data-category="pants">
+  <a class="skip" href="#content">본문 바로가기</a>
+
+  <header class="header">
+    <div class="container topbar__inner">
+      <a class="logo" href="index.html">OTSTORE</a>
+      <form class="search" role="search" data-search>
+        <label class="sr-only" for="searchInput">상품 검색</label>
+        <input id="searchInput" type="search" placeholder="브랜드, 상품명 검색" autocomplete="off">
+        <svg class="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+      </form>
+      <div class="util">
+        <button type="button" class="cart-btn" data-open-cart aria-label="장바구니 열기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="cart-btn__label">장바구니</span>
+          <span class="cart-btn__badge" data-cart-count hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="gnb" aria-label="카테고리">
+    <div class="container">
+      <ul class="gnb__list">
+        <li><a class="gnb__link" href="index.html">상의</a></li>
+        <li><a class="gnb__link is-active" href="pants.html" aria-current="page">바지</a></li>
+        <li><a class="gnb__link" href="socks.html">양말</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="content" class="container">
+    <section class="banner" aria-label="기획전">
+      <div class="banner__text">
+        <p class="banner__eyebrow">DENIM &amp; SLACKS</p>
+        <h2 class="banner__title">핏으로 고르는 바지<br>최대 30% 할인</h2>
+        <p class="banner__desc">스트레이트, 와이드, 조거까지 지금 가장 많이 찾는 핏</p>
+      </div>
+      <div class="banner__art" data-banner-art aria-hidden="true"></div>
+    </section>
+
+    <div class="cate-head">
+      <ol class="breadcrumb" aria-label="현재 위치">
+        <li><a href="index.html">홈</a></li>
+        <li>바지</li>
+      </ol>
+      <h1 class="cate-head__title">바지</h1>
+    </div>
+
+    <div class="chips" data-chips aria-label="세부 카테고리"></div>
+
+    <div class="toolbar">
+      <p class="toolbar__count">상품 <strong data-count>0</strong>개</p>
+      <div class="sort">
+        <label class="sr-only" for="sort">정렬</label>
+        <select id="sort" class="sort__select" data-sort>
+          <option value="recommend">추천순</option>
+          <option value="low">낮은 가격순</option>
+          <option value="high">높은 가격순</option>
+          <option value="discount">할인율순</option>
+          <option value="review">후기 많은순</option>
+        </select>
+      </div>
+    </div>
+
+    <ul class="product-grid" data-grid></ul>
+    <p class="empty" data-empty hidden>조건에 맞는 상품이 없어요.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <strong class="footer__logo">OTSTORE</strong>
+      <p>이 사이트는 토스페이먼츠 결제위젯 연동 퍼블리싱 데모입니다. 테스트 결제는 실제로 청구되지 않습니다.</p>
+      <p>고객센터 0000-0000 · 평일 10:00–18:00</p>
+    </div>
+  </footer>
+</body>
+</html>
