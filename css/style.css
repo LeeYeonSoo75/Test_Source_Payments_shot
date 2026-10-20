@@ -145,6 +145,14 @@ del { text-decoration: line-through; }
 .breadcrumb { display: flex; gap: 6px; font-size: 12px; color: var(--gray-500); }
 .breadcrumb li + li::before { content: "›"; margin-right: 6px; }
 .cate-head__title { margin-top: 6px; font-size: 26px; font-weight: 800; letter-spacing: -0.035em; }
+.cate-head__desc { max-width: 720px; margin-top: 8px; font-size: 13px; line-height: 1.7; color: var(--gray-700); }
+
+/* ---------- 자주 묻는 질문 ---------- */
+.faq { margin: 24px 0 64px; border-top: 2px solid var(--black); }
+.faq__title { padding: 18px 0 10px; font-size: 18px; font-weight: 800; letter-spacing: -0.03em; }
+.faq__item { border-bottom: 1px solid var(--gray-200); }
+.faq__item summary { padding: 14px 0; font-size: 14px; font-weight: 600; cursor: pointer; }
+.faq__item p { padding: 0 0 16px; font-size: 13px; line-height: 1.7; color: var(--gray-700); }
 
 .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px 0 4px; }
 .chips::-webkit-scrollbar { display: none; }

@@ -1,0 +1,24 @@
+# OTSTORE — 검색엔진과 AI 검색/답변 크롤러 모두 허용
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+Disallow: /success.html
+Disallow: /fail.html
+
+# AI 검색·답변 엔진 (GEO)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Yeti
+Allow: /
+Disallow: /checkout.html
+Disallow: /success.html
+Disallow: /fail.html
+
+Sitemap: https://testsourcepayments.vercel.app/sitemap.xml
