@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/payments-demo/:path*", "destination": "/payments-demo/index.html" }
+  ]
+}

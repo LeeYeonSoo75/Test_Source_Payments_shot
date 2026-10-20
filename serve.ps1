@@ -31,6 +31,10 @@ try {
       $path = [Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath).TrimStart('/')
       if ($path -eq '' -or $path.EndsWith('/')) { $path += 'index.html' }
       $file = [IO.Path]::GetFullPath([IO.Path]::Combine($root, $path))
+      # payments-demo는 React SPA: 없는 경로는 index.html로 보낸다 (vercel.json rewrites와 동일)
+      if ($path.StartsWith('payments-demo/') -and -not [IO.File]::Exists($file)) {
+        $file = [IO.Path]::Combine($root, 'payments-demo\index.html')
+      }
 
       if ($file.StartsWith($root, [StringComparison]::OrdinalIgnoreCase) -and [IO.File]::Exists($file)) {
         $ext = [IO.Path]::GetExtension($file).ToLower()
