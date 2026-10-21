@@ -39,8 +39,11 @@
     const lines = OT.toLines(record.items);
     $('[data-result-icon]').className = 'result__icon';
     $('[data-result-icon]').innerHTML = OT.icons.check;
-    $('[data-result-title]').textContent = '주문이 완료되었어요';
-    $('[data-result-desc]').textContent = '주문해 주셔서 감사합니다. 상품을 빠르게 준비해 드릴게요.';
+    // 서버 승인 없이 끝난 테스트 결제는 실제 주문처럼 보이지 않게 안내한다
+    $('[data-result-title]').textContent = confirmed ? '주문이 완료되었어요' : '테스트 결제가 완료되었어요';
+    $('[data-result-desc]').textContent = confirmed
+      ? '주문해 주셔서 감사합니다. 상품을 빠르게 준비해 드릴게요.'
+      : '결제 흐름을 끝까지 체험하셨어요. 실제로 청구되거나 배송되지 않아요.';
 
     const rows = [
       ['주문번호', record.orderId],
@@ -49,7 +52,6 @@
       ['결제 방식', paymentType === 'BRANDPAY' ? '브랜드페이' : '일반결제'],
       ['결제 금액', OT.won(record.amount), 'receipt__total']
     ];
-    if (!confirmed) rows.push(['paymentKey', record.paymentKey, 'receipt__mono']);
     $('[data-receipt]').innerHTML = rows.map(([k, v, cls]) =>
       '<div' + (cls ? ' class="' + cls + '"' : '') + '><dt>' + k + '</dt><dd>' + OT.escapeHtml(v) + '</dd></div>'
     ).join('');
