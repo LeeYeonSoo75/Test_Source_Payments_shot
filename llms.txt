@@ -17,6 +17,11 @@
 - [양말](https://testsourcepayments.vercel.app/socks.html): 크루, 장목, 발목 양말과 패키지
 - [결제 데모](https://testsourcepayments.vercel.app/payments-demo/): Supabase와 토스페이먼츠로 만든 회원 결제·취소 데모
 
+## AI 사이트맵
+
+- [전체 상품 카탈로그](https://testsourcepayments.vercel.app/llms-full.txt): 32개 상품의 이름·브랜드·가격·할인율·이미지와 자주 묻는 질문 전체
+- [사이트맵](https://testsourcepayments.vercel.app/sitemap.xml): 검색엔진용 페이지 목록
+
 ## 참고
 
 - [토스페이먼츠 개발자센터](https://docs.tosspayments.com): 결제위젯·결제 승인·취소 API 문서

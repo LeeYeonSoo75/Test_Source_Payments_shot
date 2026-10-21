@@ -22,3 +22,7 @@ Disallow: /success.html
 Disallow: /fail.html
 
 Sitemap: https://testsourcepayments.vercel.app/sitemap.xml
+
+# AI용 사이트 안내와 전체 카탈로그 (llms.txt 표준)
+# https://testsourcepayments.vercel.app/llms.txt
+# https://testsourcepayments.vercel.app/llms-full.txt
